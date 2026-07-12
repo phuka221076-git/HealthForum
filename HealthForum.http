@@ -1,0 +1,6 @@
+@HealthForum_HostAddress = http://localhost:5243
+
+GET {{HealthForum_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
