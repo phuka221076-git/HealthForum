@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    
+    /* Xác định mã module đầu ra theo chuẩn ESNext hiện đại (Mặc định từ TS 6.0) */
+    "module": "ESNext",
+    
+    /* Chỉ định rõ ràng cách phân giải để ép VS Code quét sâu vào các gói types mới */
+    "moduleResolution": "Bundler", 
+    
+    "strict": false,
+    "checkJs": false,
+    
+    /* Bỏ qua kiểm tra lỗi định nghĩa kiểu (.d.ts) của bên thứ ba trong node_modules */
+    "skipLibCheck": true, 
+    
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules", "dist"]
+}

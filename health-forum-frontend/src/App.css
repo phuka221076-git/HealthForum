@@ -1,0 +1,283 @@
+/* --- GIAO DIỆN TỔNG THỂ --- */
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --success-color: #2a9d8f;
+    --bg-body: #f4f7f6;
+    --bg-card: #ffffff;
+    --text-main: #2b2d42;
+    --text-muted: #6c757d;
+    --border-color: #e9ecef;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.forum-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- HEADER & KHU VỰC TÀI KHOẢN --- */
+.forum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+    .forum-header h1 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin: 0;
+        font-weight: 700;
+    }
+
+.user-info {
+    background: var(--bg-card);
+    padding: 8px 16px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+}
+
+.btn-logout {
+    background: none;
+    border: 1px solid #d90429;
+    color: #d90429;
+    padding: 4px 12px;
+    border-radius: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+    .btn-logout:hover {
+        background: #d90429;
+        color: white;
+    }
+
+/* --- FORM ĐĂNG NHẬP / ĐĂNG KÝ --- */
+.auth-box {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 320px;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+    .auth-tabs button {
+        flex: 1;
+        background: none;
+        border: none;
+        padding: 10px 0;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--text-muted);
+        transition: all 0.2s;
+    }
+
+        .auth-tabs button.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+    .auth-form input {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border 0.2s;
+    }
+
+        .auth-form input:focus {
+            border-color: var(--primary-color);
+        }
+
+.btn-auth {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+    .btn-auth:hover {
+        background-color: #005f96;
+    }
+
+.btn-reg {
+    background-color: var(--success-color);
+}
+
+    .btn-reg:hover {
+        background-color: #218376;
+    }
+
+/* --- BOX ĐĂNG BÀI MỚI --- */
+.create-post-box {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 35px;
+}
+
+    .create-post-box h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: var(--text-main);
+        font-size: 1.2rem;
+    }
+
+    .create-post-box input[type="text"],
+    .create-post-box textarea,
+    .create-post-box select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+        outline: none;
+        font-family: inherit;
+    }
+
+        .create-post-box input[type="text"]:focus,
+        .create-post-box textarea:focus,
+        .create-post-box select:focus {
+            border-color: var(--secondary-color);
+        }
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.create-post-box select {
+    margin-bottom: 0;
+    flex: 1;
+    max-width: 250px;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+    .btn-submit:hover {
+        background-color: #005f96;
+    }
+
+/* --- DANH SÁCH BÀI ĐĂNG (POST CARDS) --- */
+.posts-list h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.post-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+    .post-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+.category-badge {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.post-content {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    white-space: pre-line; /* Giữ nguyên xuống dòng của văn bản */
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+    .post-footer strong {
+        color: var(--text-main);
+    }
+
+/* Hiệu ứng loading */
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
